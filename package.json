@@ -4,6 +4,7 @@
   "description": "",
   "main": "webServer.js",
   "scripts": {
+    "start":"node webServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
