@@ -43,7 +43,7 @@ connectBtn.addEventListener('click', () => {
                 yourSymbol = data.game.players[0].symbol
                 console.log(`game id is ${gameId} and your symbol is ${yourSymbol}`)
                 cells.forEach(cell => {
-                    cell.classList.remove('x')
+                    cell.classList.remove('cross')
                     cell.classList.remove('cirlce')
                 })
                 break
@@ -66,7 +66,7 @@ connectBtn.addEventListener('click', () => {
                 console.log(`game id is ${gameId} and your symbol is ${yourSymbol}`)
                 cells.forEach(cell => {
                     console.log(`cell classes are ${cell.classList}`)
-                    cell.classList.remove('x')
+                    cell.classList.remove('cross')
                     cell.classList.remove('cirlce')
 
                 })
@@ -76,12 +76,12 @@ connectBtn.addEventListener('click', () => {
                 console.log(`game updateBoard is ${data.game.board}`)
                 game = data.game
                 board = game.board
-                const symbolClass = yourSymbol == 'x' ? 'x' : 'circle'
+                const symbolClass = yourSymbol == 'x' ? 'cross' : 'circle'
                 gameBoard.classList.add(symbolClass)
                 index = 0
                 cells.forEach(cell => {
                     if (board[index] == 'x')
-                        cell.classList.add('x')
+                        cell.classList.add('cross')
                     else if (board[index] == 'o')
                         cell.classList.add('circle')
                     else
@@ -135,12 +135,12 @@ function clickCell(event) {
     if (!isTurn || event.target.classList.contains('x') || (event.target.classList.contains('circle')))
         return
 
-    const cellclass = yourSymbol == 'x' ? 'x' : 'circle'
+    const cellclass = yourSymbol == 'x' ? 'cross' : 'circle'
     event.target.classList.add(cellclass)
 
     index = 0
     cells.forEach(cell => {
-        if (cell.classList.contains('x'))
+        if (cell.classList.contains('cross'))
             board[index] = 'x'
         if (cell.classList.contains('circle'))
             board[index] = 'o'
@@ -153,7 +153,7 @@ function clickCell(event) {
 function makeMove() {
     index = 0
     cells.forEach((cell) => {
-        if (cell.classList.contains('x'))
+        if (cell.classList.contains('cross'))
             game.board[index] == 'x'
 
         if (cell.classList.contains('circle'))
