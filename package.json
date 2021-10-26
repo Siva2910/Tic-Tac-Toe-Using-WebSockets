@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "webServer.js",
+  "type": "module",
   "scripts": {
-    "start":"node webServer.js",
+    "start": "node  webServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "websocket": "^1.0.31",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.14",
+    "socket.io": "^4.3.1",
+    "websocket": "^1.0.34",
     "ws": "^7.2.5"
   }
 }
